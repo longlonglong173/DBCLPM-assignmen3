@@ -1,0 +1,2 @@
+(this["webpackJsonpreact-toolkit-material"]=this["webpackJsonpreact-toolkit-material"]||[]).push([[4],{218:function(t,e,a){"use strict";a.r(e);var o=a(0),r=a.n(o),i=a(211);e.default=Object(o.memo)((function(){return r.a.createElement(i.a,{width:1024,mx:"auto",py:6},"Hello world!")}))}}]);
+//# sourceMappingURL=4.9658869e.chunk.js.map
