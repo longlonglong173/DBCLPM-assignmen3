@@ -1,5 +1,4 @@
 // TODO: remove below key - key to prevent source code leaking
-// yAiTV0SAOxu8Z1zWduDs3DGlh8X5B95Z8kBRcl9W
 import * as React from "react";
 
 import CssBaseline from "@material-ui/core/CssBaseline";
