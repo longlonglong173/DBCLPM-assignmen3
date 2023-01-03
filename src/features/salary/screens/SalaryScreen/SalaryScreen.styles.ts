@@ -8,4 +8,26 @@ export const useStyles = makeStyles(theme => ({
       fontSize: "16px",
     },
   },
+  addRowLine: {
+    width: "100%",
+    // height: "2px",
+    backgroundColor: "#ccc",
+    padding: 0,
+    borderBottom: "3px solid transparent",
+    borderTop: "3px solid transparent",
+    transition: "all 200ms",
+    position: "relative",
+    cursor: "pointer",
+  },
+  addIcon: {
+    position: "absolute",
+    right: 0,
+    top: "50%",
+    transform: "translateY(-50%)",
+  },
+  cellAction: {
+    // width: 150,
+    // maxWidth: 150,
+    // minWidth: 150,
+  },
 }));

@@ -5,12 +5,14 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { PersistGate } from "redux-persist/integration/react";
 
 import SimpleSnackbar from "components/SimpleSnackbar/SimpleSnackbar";
+import Watcher from "components/Watcher/Watcher";
 import store, { persistor } from "redux/store";
 import Routes from "routes/Routes";
 
 const App: React.FC = () => (
   <Provider store={store} key="provider">
     <PersistGate loading={null} persistor={persistor}>
+      <Watcher />
       <SimpleSnackbar />
       <Router>
         <Routes />

@@ -1,3 +1,8 @@
 export type SalaryState = {
-  accessToken: string | null;
+  list: SalaryType[];
+};
+
+export type SalaryType = {
+  salaryPerMonth: number;
+  amount: number;
 };

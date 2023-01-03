@@ -36,8 +36,7 @@ const Routes: FC = () => {
   return (
     <Suspense fallback={<Loader isFullScreen />}>
       <Switch>
-        {ROUTE_LIST.map((route, id, arr) => {
-          console.log(route.path, arr);
+        {ROUTE_LIST.map(route => {
           return <RouteWrapper key={route.id} {...route} />;
         })}
       </Switch>

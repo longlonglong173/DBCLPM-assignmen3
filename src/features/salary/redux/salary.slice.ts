@@ -1,8 +1,10 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
-import { SalaryState } from "../types/salary.types";
+import dataImport from "mock-data/salary.json";
+
+import { SalaryState, SalaryType } from "../types/salary.types";
 // import { LoginDataDef, AuthState } from "../types/salary.types";
 
 // export const postLogin = createAsyncThunk(
@@ -14,13 +16,35 @@ import { SalaryState } from "../types/salary.types";
 // );
 
 const initialState: SalaryState = {
-  accessToken: "",
+  list: localStorage.getItem("salary.list")
+    ? (JSON.parse(
+        localStorage.getItem("salary.list") as string
+      ) as SalaryType[])
+    : dataImport,
 };
 
 const salarySlice = createSlice({
   name: "salary",
   initialState,
-  reducers: {},
+  reducers: {
+    resetSalaryList(state) {
+      state.list = [];
+    },
+    addNewSalary(state, action: PayloadAction<SalaryType>) {
+      state.list.push(action.payload);
+    },
+    removeSalaryByIndex(state, action: PayloadAction<number>) {
+      state.list.splice(action.payload, 1);
+    },
+    updateSalaryByIndex(
+      state,
+      {
+        payload: { index, data },
+      }: PayloadAction<{ index: number; data: SalaryType }>
+    ) {
+      state.list[index] = data;
+    },
+  },
   // extraReducers: builder => {
   //   // builder.addCase(postLogin.fulfilled, (state, action) => {
   //   //   state.accessToken = action.payload.accessToken;
@@ -30,6 +54,9 @@ const salarySlice = createSlice({
   //   // });
   // },
 });
+
+export const { addNewSalary, removeSalaryByIndex, updateSalaryByIndex } =
+  salarySlice.actions;
 
 const salaryConfig = {
   key: "salary",
