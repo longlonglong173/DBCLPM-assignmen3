@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/mouse-events-have-key-events */
-import React, { FC, memo, useMemo, useState } from "react";
+import React, { FC, memo, useState } from "react";
 
 import {
   Box,
@@ -21,7 +21,11 @@ import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 import DeleteForeverIcon from "@material-ui/icons/DeleteForever";
 
 import ConfirmDialog from "components/ConfirmDialog";
-import { WORKS_HOUR_PER_MONTH } from "constants/commont.constants";
+import {
+  useGetAvgPersonPerHour,
+  useGetAvgSalaryPersonalPerMonth,
+  useGetTotalSalaryPerMonth,
+} from "hooks/use-salary";
 import { useAppDispatch, useAppSelector } from "redux/store";
 
 import CustomMuiTypography from "styles/themes/components/CustomMuiTypography";
@@ -45,22 +49,11 @@ const SalaryScreen: FC = () => {
 
   const [rowEditIndex, setRowEditIndex] = useState<number>(-1);
 
-  const totalSalaryPerMonth = useMemo(() => {
-    return list.reduce(
-      (init, { salaryPerMonth, amount }) => init + salaryPerMonth * amount,
-      0
-    );
-  }, [list]);
+  const totalSalaryPerMonth = useGetTotalSalaryPerMonth();
 
-  const avgSalaryPersonalPerMonth = useMemo(() => {
-    return Math.round(
-      totalSalaryPerMonth / list.reduce((init, { amount }) => init + +amount, 0)
-    );
-  }, [list, totalSalaryPerMonth]);
+  const avgSalaryPersonalPerMonth = useGetAvgSalaryPersonalPerMonth();
 
-  const avgPersonPerMonth = useMemo(() => {
-    return Math.round(avgSalaryPersonalPerMonth / WORKS_HOUR_PER_MONTH);
-  }, [avgSalaryPersonalPerMonth]);
+  const avgPersonPerHour = useGetAvgPersonPerHour();
 
   const handleShowRowPopover = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
@@ -207,7 +200,9 @@ const SalaryScreen: FC = () => {
                         }}
                       />
                     </TableCell>
-                    <TableCell />
+                    <TableCell align="right">
+                      {newAmount * newSalaryPerMonth}
+                    </TableCell>
 
                     <TableCell
                       className={classes.cellAction}
@@ -301,11 +296,11 @@ const SalaryScreen: FC = () => {
               <TableRow>
                 <TableCell colSpan={3} align="right">
                   <CustomMuiTypography fontWeight="fontWeightBold">
-                    Mức bình quân 1 người/1 giờ /
+                    Mức bình quân 1 người/1 giờ
                   </CustomMuiTypography>
                 </TableCell>
                 <TableCell align="right">
-                  {formatNumber(avgPersonPerMonth)}
+                  {formatNumber(avgPersonPerHour)}
                 </TableCell>
                 <TableCell />
               </TableRow>

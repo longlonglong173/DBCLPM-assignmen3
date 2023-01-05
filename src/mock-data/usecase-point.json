@@ -1,0 +1,53 @@
+[
+  {
+    "name": "B",
+    "data": {
+      "simple": {
+        "amount": 4,
+        "point": 20
+      },
+      "medium": {
+        "amount": 21,
+        "point": 210
+      },
+      "complex": {
+        "amount": 0,
+        "point": 0
+      }
+    }
+  },
+  {
+    "name": "M",
+    "data": {
+      "simple": {
+        "amount": 3,
+        "point": 18
+      },
+      "medium": {
+        "amount": 12,
+        "point": 144
+      },
+      "complex": {
+        "amount": 3,
+        "point": 54
+      }
+    }
+  },
+  {
+    "name": "T",
+    "data": {
+      "simple": {
+        "amount": 8,
+        "point": 60
+      },
+      "medium": {
+        "amount": 4,
+        "point": 60
+      },
+      "complex": {
+        "amount": 4,
+        "point": 90
+      }
+    }
+  }
+]

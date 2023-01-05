@@ -1,0 +1,67 @@
+[
+  {
+    "name": "Hệ thống phân tán",
+    "weight": 2,
+    "ratingValue": 0
+  },
+  {
+    "name": "Tính chất đáp ứng tức thời hoặc yêu cầu đảm bảo thông lượng ",
+    "weight": 1,
+    "ratingValue": 5
+  },
+  {
+    "name": "Hiệu quả sử dụng trực tuyến",
+    "weight": 1,
+    "ratingValue": 5
+  },
+  {
+    "name": "Độ phức tạp của xử lý bên trong",
+    "weight": 1,
+    "ratingValue": 4
+  },
+  {
+    "name": "Mã nguồn phải tái sử dụng được",
+    "weight": 1,
+    "ratingValue": 3
+  },
+  {
+    "name": "Dễ cài đặt ",
+    "weight": 0.5,
+    "ratingValue": 5
+  },
+  {
+    "name": "Dễ sử dụng ",
+    "weight": 0.5,
+    "ratingValue": 5
+  },
+  {
+    "name": "Khả năng chuyển đổi ",
+    "weight": 2,
+    "ratingValue": 4
+  },
+  {
+    "name": "Khả năng dễ thay đổi",
+    "weight": 1,
+    "ratingValue": 4
+  },
+  {
+    "name": "Sử dụng đồng thời ",
+    "weight": 1,
+    "ratingValue": 5
+  },
+  {
+    "name": "Có các tính năng bảo mật đặc biệt",
+    "weight": 1,
+    "ratingValue": 3
+  },
+  {
+    "name": "Cung cấp truy nhập trực tiếp tới các phần mềm của các hãng thứ ba",
+    "weight": 1,
+    "ratingValue": 3
+  },
+  {
+    "name": "Yêu cầu phương tiện đào tạo đặc biệt cho người sử dụng",
+    "weight": 1,
+    "ratingValue": 2
+  }
+]

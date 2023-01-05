@@ -1,0 +1,23 @@
+{
+  "simple": {
+    "type": 1,
+    "desc": "Thuộc loại giao diện của chương trình",
+    "amount": 3,
+    "point": 3,
+    "note": ""
+  },
+  "medium": {
+    "type": 2,
+    "desc": "Giao diện tương tác hoặc phục vụ một giao thức hoạt động",
+    "amount": 3,
+    "point": 6,
+    "note": ""
+  },
+  "complex": {
+    "type": 3,
+    "desc": "Giao diện đồ họa",
+    "amount": 3,
+    "point": 9,
+    "note": ""
+  }
+}

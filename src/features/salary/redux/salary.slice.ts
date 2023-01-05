@@ -16,11 +16,7 @@ import { SalaryState, SalaryType } from "../types/salary.types";
 // );
 
 const initialState: SalaryState = {
-  list: localStorage.getItem("salary.list")
-    ? (JSON.parse(
-        localStorage.getItem("salary.list") as string
-      ) as SalaryType[])
-    : dataImport,
+  list: dataImport,
 };
 
 const salarySlice = createSlice({
@@ -61,7 +57,6 @@ export const { addNewSalary, removeSalaryByIndex, updateSalaryByIndex } =
 const salaryConfig = {
   key: "salary",
   storage,
-  whitelist: ["accessToken"],
 };
 
 export const salaryReducer = persistReducer(salaryConfig, salarySlice.reducer);

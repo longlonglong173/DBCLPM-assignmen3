@@ -13,7 +13,7 @@ const SALARY_SCREEN: RouteItemDef = {
   path: SalaryPathsEnum.SALARY,
   component: SalaryScreen,
   pageTitle: "BẢNG TÍNH LƯƠNG BÌNH QUÂN / NGƯỜI/ GIỜ",
-  navigationTitle: "Salary",
+  navigationTitle: "Lương bình quân",
 };
 
 const SALARY_ROUTES = [SALARY_SCREEN];

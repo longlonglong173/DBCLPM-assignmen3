@@ -1,0 +1,54 @@
+{
+  "member": [
+    {
+      "name": "Có áp dụng qui trình phát triển phần mềm theo mẫu RUP và có hiểu biết về RUP hoặc quy trình phát triển phần mềm tương đương",
+      "weight": 1.5,
+      "ratingValue": 4.5,
+      "experienceStability": 1
+    },
+    {
+      "name": "Có kinh nghiệm về ứng dụng tương tự ",
+      "weight": 0.5,
+      "ratingValue": 4,
+      "experienceStability": 0.1
+    },
+    {
+      "name": "Có kinh nghiệm về hướng đối tượng",
+      "weight": 1,
+      "ratingValue": 5,
+      "experienceStability": 1
+    },
+    {
+      "name": "Có khả năng lãnh đạo Nhóm",
+      "weight": 0.5,
+      "ratingValue": 3,
+      "experienceStability": 0.1
+    },
+    {
+      "name": "Tính chất năng động",
+      "weight": 1,
+      "ratingValue": 4,
+      "experienceStability": 1
+    }
+  ],
+  "project": [
+    {
+      "name": "Độ ổn định của các yêu cầu",
+      "weight": 2,
+      "ratingValue": 4,
+      "experienceStability": 1
+    },
+    {
+      "name": "Sử dụng các nhân viên làm bán thời gian",
+      "weight": -1,
+      "ratingValue": 0,
+      "experienceStability": 0
+    },
+    {
+      "name": "Dùng ngôn ngữ lập trình loại khó",
+      "weight": -1,
+      "ratingValue": 0,
+      "experienceStability": 0
+    }
+  ]
+}
